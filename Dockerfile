@@ -1,5 +1,5 @@
 FROM tomcat:9-jre8
-MAINTAINER GeoNode Development Team
+MAINTAINER Wayner Barrios <waybarrios@gmail.com>
 
 #
 # Set GeoServer version and data directory
