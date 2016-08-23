@@ -11,8 +11,8 @@ ENV GEOSERVER_DATA_DIR="/geoserver_data"
 #
 RUN cd /usr/local/tomcat/webapps \
     && wget --progress=bar:force:noscroll https://github.com/waybarrios/geoserver/archive/master.zip \
-    && unzip -q geoserver-master.zip -d geoserver \
-    && rm geoserver-master.zip \
+    && unzip -q master.zip -d geoserver \
+    && rm master.zip \
     && mkdir $GEOSERVER_DATA_DIR
 
 VOLUME $GEOSERVER_DATA_DIR
