@@ -10,9 +10,9 @@ ENV GEOSERVER_DATA_DIR="/geoserver_data"
 # Download and install GeoServer
 #
 RUN cd /usr/local/tomcat/webapps \
-    && wget --progress=bar:force:noscroll http://build.geonode.org/geoserver/latest/geoserver-2.9.x.war \
-    && unzip -q geoserver-2.9.x.war -d geoserver \
-    && rm geoserver-2.9.x.war \
+    && wget --progress=bar:force:noscroll https://github.com/waybarrios/geoserver/archive/master.zip \
+    && unzip -q geoserver-master.zip -d geoserver \
+    && rm geoserver-master.zip \
     && mkdir $GEOSERVER_DATA_DIR
 
 VOLUME $GEOSERVER_DATA_DIR
